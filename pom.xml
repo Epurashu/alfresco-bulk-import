@@ -3,17 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.alfresco.extension</groupId>
   <artifactId>alfresco-bulk-import-parent</artifactId>
   <packaging>pom</packaging>
   <version>2.1.1-SNAPSHOT</version>
   <name>Bulk Import Tool - Parent POM</name>
-  <description>Bulk Import Tool for Alfresco v5.x.</description>
+  <description>Bulk Import Tool for Alfresco v6.x.</description>
 
   <parent>
-    <groupId>org.alfresco.maven</groupId>
-    <artifactId>alfresco-sdk-parent</artifactId>
-    <version>2.2.0</version>
+    <groupId>org.alfresco</groupId>
+    <artifactId>acs-community-packaging</artifactId>
+    <version>6.0.5-ea</version>
   </parent>
 
   <licenses>
@@ -42,18 +41,6 @@
     <system>github</system>
     <url>https://github.com/pmonks/alfresco-bulk-import/issues</url>
   </issueManagement>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>${alfresco.groupId}</groupId>
-        <artifactId>alfresco-platform-distribution</artifactId>
-        <version>${alfresco.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <build>
     <finalName>${project.artifactId}-${project.version}</finalName>
